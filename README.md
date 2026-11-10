@@ -13,3 +13,11 @@
 Основной модуль `Application` зависит от абстракции `ILogger`,
 а конкретные реализации (`FileLogger`, `DatabaseLogger`, `RemoteLogger`, `ConsoleLogger`)
 внедряются через конструктор.
+
+## Установка
+
+```powershell
+dotnet restore
+dotnet build
+dotnet run --project LoggingSystem.csproj
+``` 
