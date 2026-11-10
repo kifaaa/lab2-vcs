@@ -145,8 +145,11 @@ namespace LoggingSystem
                 Console.WriteLine("Содержимое файла:\n" + content);
             }
 
-            Console.WriteLine("\nНажмите любую клавишу для выхода...");
-            Console.ReadKey();
+            if (!Console.IsInputRedirected)
+            {
+                Console.WriteLine("\nНажмите любую клавишу для выхода...");
+                Console.ReadKey();
+            }
         }
     }
 }
